@@ -1,0 +1,17 @@
+ FUNCTION palindrome(word : string) : boolean
+VAR
+    result : boolean
+    i, n : integer
+BEGIN
+    // Initializing variables
+    n = length(word);
+    result = true;
+    i = 0;
+    WHILE (result AND i ≤ floor(n / 2)) DO
+        IF (word[i] != word[n - 1 - i]) THEN
+            result = false;
+        END-IF
+        i = i + 1;
+     END WHILE
+    Return (result);
+  END
